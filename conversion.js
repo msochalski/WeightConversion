@@ -10,7 +10,7 @@ class Converter
 {
     static kilogramsToAll(kg) {
         return [["Grams", round(kg * 1000)],
-                ["Pounds", round(kg * 0.00220462)],
+                ["Pounds", round(kg * 2.205)],
                 ["Ounces", round(kg * 35.274)]
             ]
     }
@@ -18,24 +18,24 @@ class Converter
     static gramsToAll(grams) {
         return [
                 ["Kilograms", round(grams / 1000)],
-                ["Pounds", round(grams * 0.00220462)],
-                ["Ounces", round(grams * 0.0352739200000000003)]
+                ["Pounds", round(grams / 454)],
+                ["Ounces", round(grams / 28.35)]
             ]
     }
 
     static ouncesToAll(ounces) {
         return [
             ["Kilograms", round(ounces / 35.274)],
-            ["Grams", round(ounces / 16)],
-            ["Pounds", round(ounces * 28.3495)]
+            ["Grams", round(ounces * 28.3495)],
+            ["Pounds", round(ounces / 16)]
         ]
     }
 
     static poundsToAll(pounds) {
         return [
-            ["Kilograms", round(pounds * 16)],
-            ["Grams", round(pounds * 0.453592)],
-            ["Ounces", round(pounds * 453.5920000001679)]
+            ["Kilograms", round(pounds / 2.205)],
+            ["Grams", round(pounds * 454)],
+            ["Ounces", round(pounds * 16)]
         ]
     }
 }
